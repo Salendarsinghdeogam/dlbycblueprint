@@ -181,6 +181,15 @@
   margin-bottom: 15px;
 }
 
+.feature-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  margin-bottom: 12px;
+}
+
 .feature-card h3 {
   margin-bottom: 15px;
   font-size: 1.5rem;
@@ -416,6 +425,11 @@
 
   .grid-2, .grid-3 {
     grid-template-columns: 1fr;
+  }
+
+  .feature-image {
+    height: 200px;
+    border-radius: 12px;
   }
 }
 

@@ -182,6 +182,11 @@ const Home = () => {
           <h2 className="section-title">Our Culture</h2>
           <div className="grid grid-3">
             <div className="feature-card">
+              <img
+                className="feature-image"
+                src={danceImages[0]}
+                alt="Folk music performance"
+              />
               <div className="feature-icon">🎵</div>
               <h3>Folk Music</h3>
               <p>
@@ -190,6 +195,11 @@ const Home = () => {
               </p>
             </div>
             <div className="feature-card">
+              <img
+                className="feature-image"
+                src={danceImages[1]}
+                alt="Traditional art"
+              />
               <div className="feature-icon">🎨</div>
               <h3>Traditional Art</h3>
               <p>
@@ -198,6 +208,11 @@ const Home = () => {
               </p>
             </div>
             <div className="feature-card">
+              <img
+                className="feature-image"
+                src={danceImages[2]}
+                alt="Language and scripts"
+              />
               <div className="feature-icon">📜</div>
               <h3>Language & Scripts</h3>
               <p>
