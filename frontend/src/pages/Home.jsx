@@ -52,8 +52,8 @@ const fallbackFestivals = [
 
 const danceImages = [
   "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80",
+  "https://www.sahapedia.org/sites/default/files/styles/sp_page_banner_800x800/public/05_14.jpg?itok=EoRfu-YO",
+  "http://ho.triballanguage.in/uploads/images/image_750x_5dc253b1d3459.jpg",
   "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=900&q=80",
 ];
 
@@ -181,44 +181,50 @@ const Home = () => {
         <div className="container">
           <h2 className="section-title">Our Culture</h2>
           <div className="grid grid-3">
-            <div className="feature-card">
+            <div className="festival-card">
               <img
-                className="feature-image"
+                className="festival-image"
                 src={danceImages[0]}
                 alt="Folk music performance"
               />
-              <div className="feature-icon">🎵</div>
-              <h3>Folk Music</h3>
-              <p>
-                Experience the soulful melodies and rhythms of HO tribal music
-                passed down through generations.
-              </p>
+              <div className="festival-content">
+                <div className="feature-icon">🎵</div>
+                <h3>Folk Music</h3>
+                <p>
+                  Experience the soulful melodies and rhythms of HO tribal music
+                  passed down through generations.
+                </p>
+              </div>
             </div>
-            <div className="feature-card">
+            <div className="festival-card">
               <img
-                className="feature-image"
+                className="festival-image"
                 src={danceImages[1]}
                 alt="Traditional art"
               />
-              <div className="feature-icon">🎨</div>
-              <h3>Traditional Art</h3>
-              <p>
-                Discover intricate paintings, sculptures, and crafts that
-                reflect the artistic spirit of the HO community.
-              </p>
+              <div className="festival-content">
+                <div className="feature-icon">🎨</div>
+                <h3>Traditional Art</h3>
+                <p>
+                  Discover intricate paintings, sculptures, and crafts that
+                  reflect the artistic spirit of the HO community.
+                </p>
+              </div>
             </div>
-            <div className="feature-card">
+            <div className="festival-card">
               <img
-                className="feature-image"
+                className="festival-image"
                 src={danceImages[2]}
                 alt="Language and scripts"
               />
-              <div className="feature-icon">📜</div>
-              <h3>Language & Scripts</h3>
-              <p>
-                Learn about the HO language and ancient scripts that preserve
-                our cultural identity and wisdom.
-              </p>
+              <div className="festival-content">
+                <div className="feature-icon">📜</div>
+                <h3>Language & Scripts</h3>
+                <p>
+                  Learn about the HO language and ancient scripts that preserve
+                  our cultural identity and wisdom.
+                </p>
+              </div>
             </div>
           </div>
         </div>
