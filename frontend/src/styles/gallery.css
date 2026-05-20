@@ -1,0 +1,253 @@
+/* Gallery Page Styles */
+.gallery-page {
+  overflow: hidden;
+}
+
+.gallery-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+.gallery-hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 40%, rgba(255, 215, 0, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.gallery-hero .container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.gallery-hero .hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-hero .hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+/* Filter Section */
+.filter-section {
+  background: var(--background);
+  padding: 40px 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.filter-btn {
+  padding: 10px 25px;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary-color);
+  color: var(--text-light);
+  transform: scale(1.05);
+}
+
+/* Gallery Cards */
+.music-gallery,
+.art-gallery,
+.script-gallery {
+  background: var(--background);
+  padding: 60px 20px;
+}
+
+.music-card,
+.art-card,
+.script-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.music-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(20, 108, 67, 0.1) 0%, rgba(82, 183, 136, 0.1) 100%);
+}
+
+.music-icon,
+.feature-icon {
+  font-size: 1.8rem;
+}
+
+.category-badge,
+.language-badge {
+  background: var(--accent-color);
+  color: var(--text-dark);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.music-card-content,
+.art-content,
+.script-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.music-card h3,
+.art-card h3,
+.script-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.artist,
+.description {
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.festival-tag {
+  background: rgba(20, 108, 67, 0.1);
+  color: var(--primary-color);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.music-stats,
+.art-stats,
+.script-stats {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+}
+
+.music-actions,
+.art-actions,
+.script-actions {
+  padding: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.music-actions .btn,
+.art-actions .btn,
+.script-actions .btn {
+  width: 100%;
+  text-align: center;
+}
+
+.login-prompt {
+  text-align: center;
+  color: var(--secondary-color);
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+/* Art-specific Styles */
+.art-image-container {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+}
+
+.art-image-placeholder {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* Script-specific Styles */
+.script-header {
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(20, 108, 67, 0.1) 0%, rgba(82, 183, 136, 0.1) 100%);
+}
+
+.script-category {
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--text-dark);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.script-preview {
+  background: rgba(20, 108, 67, 0.06);
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  max-height: 100px;
+  overflow: hidden;
+  margin: 10px 0;
+  color: var(--text-dark);
+}
+
+/* No Results */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .gallery-hero .hero-title {
+    font-size: 2rem;
+  }
+
+  .gallery-hero .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .filter-buttons {
+    gap: 10px;
+  }
+
+  .filter-btn {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
