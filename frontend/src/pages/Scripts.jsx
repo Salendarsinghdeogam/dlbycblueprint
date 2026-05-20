@@ -6,7 +6,6 @@ import * as api from "../utils/api";
 import "../styles/gallery.css";
 
 const Scripts = () => {
-  const [scripts, setScripts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [filteredScripts, setFilteredScripts] = useState([]);
@@ -20,7 +19,6 @@ const Scripts = () => {
     api
       .getScripts(selectedLanguage || "", "")
       .then((res) => {
-        setScripts(res.data);
         setFilteredScripts(res.data);
         setLoading(false);
       })

@@ -9,7 +9,6 @@ import "../styles/gallery.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const Music = () => {
-  const [music, setMusic] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [filteredMusic, setFilteredMusic] = useState([]);
@@ -23,7 +22,6 @@ const Music = () => {
     api
       .getMusic(selectedCategory || "", "")
       .then((res) => {
-        setMusic(res.data);
         setFilteredMusic(res.data);
         setLoading(false);
       })

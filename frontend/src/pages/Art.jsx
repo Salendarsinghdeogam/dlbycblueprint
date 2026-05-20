@@ -9,7 +9,6 @@ import "../styles/gallery.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const Art = () => {
-  const [art, setArt] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [filteredArt, setFilteredArt] = useState([]);
@@ -23,7 +22,6 @@ const Art = () => {
     api
       .getArt(selectedCategory || "", "")
       .then((res) => {
-        setArt(res.data);
         setFilteredArt(res.data);
         setLoading(false);
       })
