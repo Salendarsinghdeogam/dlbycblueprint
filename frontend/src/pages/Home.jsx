@@ -111,10 +111,17 @@ const Home = () => {
   return (
     <div className="home">
       {/* Hero Section */}
-      <section
-        className="hero"
-        style={{ "--hero-bg-image": `url("${heroBackgroundImage}")` }}
-      >
+      <section className="hero">
+        <picture className="hero-media">
+          <source media="(min-width:1200px)" srcSet={heroBackgroundImage} />
+          <source media="(min-width:768px)" srcSet={heroBackgroundImage} />
+          <img
+            className="hero-media-img"
+            src={heroBackgroundImage}
+            alt=""
+            loading="eager"
+          />
+        </picture>
         <div className="hero-overlay"></div>
         <div className="container hero-content">
           <h1 className="hero-title" style={{ fontFamily: heroTitleFont }}>
