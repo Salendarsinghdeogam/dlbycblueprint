@@ -8,7 +8,7 @@
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: calc(100vh - 76px);
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,8 +24,9 @@
   inset: 0;
   z-index: 0;
   background-image: var(--hero-bg-image);
-  background-position: center;
+  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
   opacity: 1;
 }
 
@@ -338,7 +339,29 @@
   font-size: 1.1rem;
 }
 
+@media (max-width: 1024px) {
+  .hero::before {
+    background-position: center top;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero {
+    min-height: 86svh;
+    padding: 72px 0;
+  }
+
+  .hero::before {
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.56) 0%, rgba(0, 0, 0, 0.38) 50%, rgba(0, 0, 0, 0.56) 100%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.56) 0%, rgba(0, 0, 0, 0.18) 46%, rgba(0, 0, 0, 0.5) 100%);
+  }
+
   .hero-title {
     font-size: clamp(1.55rem, 8vw, 2rem);
     white-space: normal;
@@ -374,5 +397,16 @@
 
   .grid-2, .grid-3 {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 80svh;
+    padding: 56px 0;
+  }
+
+  .hero::before {
+    background-position: center top;
   }
 }
